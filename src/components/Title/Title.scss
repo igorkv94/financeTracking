@@ -1,0 +1,36 @@
+@import "src/theme/variables";
+
+.left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+  width: calc(100% - 50px);
+  margin: 0 auto 40px;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.withBorder {
+  box-shadow: #a3a3a3 0 0 2px 0;
+}

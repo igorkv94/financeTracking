@@ -1,0 +1,23 @@
+.top {
+  display: flex;
+}
+
+.textField {
+  flex-grow: 1;
+}
+
+.button {
+  width: 100px;
+  border-left: 0;
+}
+
+.iconButton {
+  width: 60px;
+  border-left: 0;
+}
+
+.categoryIcon {
+  width: 60px;
+  border-right: 0;
+  flex-shrink: 0;
+}

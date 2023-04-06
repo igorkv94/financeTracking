@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.top {
+  display: flex;
+}
+
+.textField {
+  flex-grow: 1;
+}
+
+.button {
+  width: 100px;
+  border-left: 0;
+}
+
+.iconButton {
+  width: 60px;
+  border-left: 0;
+}

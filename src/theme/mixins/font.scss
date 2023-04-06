@@ -1,0 +1,10 @@
+@mixin font($fontSize, $weight, $letterSpacing, $fontFamily: "Play") {
+  font-size: $fontSize;
+  font-weight: $weight;
+  letter-spacing: $letterSpacing;
+  font-family: $fontFamily, sans-serif;
+  line-height: 1.2;
+}
+
+$playFont: "Play";
+$sourceSerifFont: "Source Serif Pro";

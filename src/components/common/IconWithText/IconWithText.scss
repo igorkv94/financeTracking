@@ -1,0 +1,23 @@
+@import "src/theme/variables";
+
+$iconWidth: 32px;
+
+.textWrapper {
+  display: flex;
+  max-width: calc(100% - #{$iconWidth});
+}
+
+.iconWithText {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.iconNearText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $iconWidth;
+  height: $iconWidth;
+  flex-shrink: 0;
+}

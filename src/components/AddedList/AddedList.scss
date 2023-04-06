@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px 0 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+
+  .amount {
+    display: flex;
+    width: 20%;
+    text-align: right;
+  }
+  .date {
+    padding-right: 30px;
+  }
+  .category {
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 0 10px;
+  }
+  .rightArrowWrapper {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+  }
+}

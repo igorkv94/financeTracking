@@ -1,0 +1,36 @@
+@import "src/theme/variables";
+
+.innerGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 28% 28% 28% 16%;
+  grid-template-rows: 40px;
+  padding: 0 10px;
+  &.withBorder {
+    border-bottom: 1px solid #cbcbb4;
+  }
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 10px;
+
+  &.indent {
+    padding-left: 42px;
+  }
+  &.amount {
+    justify-content: flex-start;
+  }
+  &.date {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-bottom: 1px solid #cbcbb4;
+  }
+
+  &.iconsWrapper {
+    justify-content: flex-end;
+  }
+}

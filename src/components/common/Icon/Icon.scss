@@ -1,0 +1,29 @@
+@import "src/theme/variables";
+
+$iconWidth: 32px;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hasHover {
+  cursor: pointer;
+  transition: background-color ease 1s;
+  background-color: transparent;
+  &:hover {
+    background-color: $black_10;
+  }
+}
+
+.disabled {
+  opacity: 0.25;
+}

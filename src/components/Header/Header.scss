@@ -1,0 +1,79 @@
+@import "src/theme/variables";
+
+.emptyHeader {
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: $headerHeight;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: $header_bg;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  border-bottom: 1px solid rgb(0 0 0 / 5%);
+  @media screen and (max-width: #{$breakpointTablet}) {
+    max-width: calc(100% - 200px);
+  }
+  @media screen and (max-width: #{$breakpointSmallTablet}) {
+    max-width: 580px;
+    width: calc(100% - 40px);
+  }
+  @media screen and (max-width: #{$breakpointMobile}) {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.left {
+  flex: 1;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.linkInner {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.name {
+  margin-left: 20px;
+}
+
+.inner {
+  display: flex;
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    display: flex;
+    margin-right: 20px;
+    :last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.iconWrapper {
+  margin-right: 20px;
+}

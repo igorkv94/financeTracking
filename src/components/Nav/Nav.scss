@@ -1,0 +1,15 @@
+@import "src/theme/variables";
+
+.wrapper {
+  display: flex;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    width: 100%;
+  }
+}
+
+.iconWrapper {
+  margin-right: 20px;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    margin: 0 auto;
+  }
+}

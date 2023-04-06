@@ -1,0 +1,19 @@
+.textWrapper {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.wrapper {
+  margin-top: 40px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.buttonWrapper {
+  width: calc(50% - 10px);
+}

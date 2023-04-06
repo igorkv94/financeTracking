@@ -1,0 +1,57 @@
+.container {
+  display: grid;
+  height: 100%;
+  grid-template: auto / 1fr 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  max-height: 100%;
+  -ms-overflow-style: none;
+  overflow: auto;
+  padding: 0 10px;
+  scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar {
+  height: 100%;
+  width: 10px;
+  padding: 5px 0;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.track {
+  box-shadow: #a3a388 0 0 0px 1px;
+  border-radius: 12px;
+  bottom: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  width: 5px;
+  z-index: 1;
+}
+
+.thumb {
+  border-radius: 12px;
+  background-color: #a3a388;
+  position: absolute;
+  width: 5px;
+  z-index: 2;
+  min-height: 10px;
+  &.disabled {
+    background-color: transparent;
+    cursor: default;
+  }
+}

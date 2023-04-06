@@ -1,0 +1,87 @@
+@import "src/theme/variables";
+
+.toastWrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.toastInner {
+  padding: 10px;
+}
+
+.toast {
+  position: relative;
+  width: 300px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    z-index: 1;
+  }
+  &.error {
+    &::before {
+      background-color: rgba($red, 0.4);
+    }
+    .toastInner {
+      background-color: rgba($red, 0.2);
+    }
+  }
+  &.success {
+    &::before {
+      background-color: rgba($green, 0.4);
+    }
+    .toastInner {
+      background-color: rgba($green, 0.2);
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animEnter {
+  animation-duration: 300ms;
+  animation-fill-mode: both;
+}
+
+.animEnterActive {
+  animation-name: bounce;
+}
+
+.animExit {
+  opacity: 0;
+}

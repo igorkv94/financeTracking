@@ -1,0 +1,64 @@
+@import "src/theme/variables";
+
+.info {
+  display: flex;
+  align-items: center;
+  padding: 5px 15px 5px 10px;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  box-shadow: #a3a3a3 0 0 2px 0;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.row {
+  display: flex;
+  &:first-child {
+    margin-bottom: 5px;
+  }
+}
+
+.left {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.procent {
+  padding-left: 10px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-left: auto;
+}
+
+.removeIcon {
+  padding-left: 20px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: $additional_bg;
+  margin: 5px 0;
+  padding-left: 30px;
+  border-top: 1px solid #d9d9ca;
+  border-bottom: 1px solid #d9d9ca;
+  &:first-child {
+    margin-top: 0;
+    border-top: 0;
+  }
+}

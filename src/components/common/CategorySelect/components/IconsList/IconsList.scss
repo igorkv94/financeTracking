@@ -1,0 +1,32 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-top: 0;
+  background-color: white;
+  height: 240px;
+}
+
+.iconsList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titleWrapper {
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover, &.isActive {
+    background-color: #e5e5e5;
+  }
+}

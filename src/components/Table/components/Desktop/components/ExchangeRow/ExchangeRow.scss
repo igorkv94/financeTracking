@@ -1,0 +1,17 @@
+@import "src/theme/variables";
+
+.sticky {
+  position: sticky;
+  top: 120px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  height: 39px;
+  background-color: $content_bg;
+}
+
+.icon {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

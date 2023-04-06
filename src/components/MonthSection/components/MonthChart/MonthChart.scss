@@ -1,0 +1,14 @@
+@import "src/theme/variables";
+
+.chartWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: calc(50% - 20px);
+  margin: 0 auto;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+  }
+}

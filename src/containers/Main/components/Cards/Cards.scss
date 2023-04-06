@@ -1,0 +1,119 @@
+@import "src/theme/variables";
+@import "src/theme/mixins/columns";
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  @include columns(3, 20, 20);
+  background: linear-gradient(169deg, #bad788 0%, #c5d8a4 100%);
+  border-radius: 20px;
+  padding: 10px 10px 20px 20px;
+  box-shadow: #00000057 1px 1px 3px 0px;
+  &.green {
+    color: $green;
+  }
+  &.red {
+    color: var(--color-red);
+  }
+  .title {
+    color: black;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    .amount {
+      position: relative;
+      margin: 10px 0 0px;
+    }
+    .compare {
+      display: flex;
+      align-items: center;
+    }
+    .loaderWrapper {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate3d(0, -50%, 0);
+      z-index: 1;
+      display: flex;
+    }
+    .hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  .right {
+    flex-shrink: 0;
+    .icon {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $additional_bg;
+      border-radius: 50%;
+    }
+    .money {
+      fill: #ad4d01;
+    }
+    .dollar {
+      fill: $green;
+    }
+    .shopping {
+      fill: #5454ff;
+    }
+  }
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 80px;
+  @media screen and (max-width: #{$breakpointDesktop}) {
+    padding: 0 25px;
+  }
+}
+
+.stats:not(.withMobileXScroll) {
+  .inner {
+    @media screen and (max-width: #{$breakpointTablet}) {
+      flex-direction: column;
+      .stat {
+        width: 100%;
+        margin: 0 0 20px 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.stats.withMobileXScroll {
+  @media screen and (max-width: #{$breakpointTablet}) {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    height: 120px;
+    margin: 0 -25px;
+    .inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+      flex-wrap: nowrap;
+      width: 100%;
+      padding: 0 25px 25px;
+      overflow-x: scroll;
+      .stat {
+        flex-shrink: 0;
+        width: 300px;
+        margin: 0 20px 0 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "src/theme/variables";
+
+.rows {
+  padding: 5px 0;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.rowTitle {
+  position: sticky;
+  top: $headerHeight;
+  background-color: $additional_bg;
+  z-index: 2;
+  .indent {
+    padding-left: 42px;
+  }
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.cat {
+  width: 35%;
+}
+
+.colorCell {
+  width: 15%;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.perc {
+  width: 20%;
+}
+

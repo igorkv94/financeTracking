@@ -1,0 +1,12 @@
+@use "sass:math";
+
+@mixin columns($columns, $space, $marginTop: 0) {
+  width: calc(#{math.div(100%, $columns)} - #{math.div(($space * ($columns - 1)), $columns)}px);
+  margin-left: #{$space}px;
+  &:nth-child(#{$columns}n + 1) {
+    margin-left: 0;
+  }
+  &:nth-child(n+#{$columns + 1}) {
+    margin-top: #{$marginTop}px;
+  }
+}

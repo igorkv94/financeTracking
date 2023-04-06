@@ -1,0 +1,52 @@
+@import "src/theme/variables";
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  height: 60px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.border {
+  border: 2px solid #000;
+  background-color: rgba(0,0,0,0.1);
+  &:not(.isActive):not(.isDisabled):hover {
+    background-color: rgba(0,0,0,0.2);
+  }
+  &.isActive {
+    box-shadow: inset rgb(0 0 0 / 30%) 0 0 8px 3px;
+  }
+  &.isDisabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+  }
+}
+
+.icon {
+  padding: 0;
+  transition: background-color ease 1s;
+  background-color: transparent;
+  &:hover {
+    background-color: $black_10;
+  }
+}
+
+.inline {
+  span {
+    transition: opacity 0.3s ease;
+  }
+  &:hover {
+    span {
+      opacity: 0.7;
+    }
+  }
+}
+
+.fullWidth {
+  width: 100%;
+}

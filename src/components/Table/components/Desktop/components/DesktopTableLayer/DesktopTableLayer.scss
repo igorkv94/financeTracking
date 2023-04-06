@@ -1,0 +1,23 @@
+@import "src/theme/variables";
+
+.gridWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 40px;
+}
+
+.gridTitle {
+  position: sticky;
+  top: $headerHeight;
+  background-color: $additional_bg;
+  z-index: 2;
+}

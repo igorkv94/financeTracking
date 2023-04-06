@@ -1,0 +1,27 @@
+@import "src/theme/variables";
+
+.month {
+  position: relative;
+  width: 25%;
+  padding-bottom: 25%;
+  height: 0;
+}
+
+.monthInner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 20px;
+  box-shadow: 0 0 1px 0 #a3a3a3;
+  transition: background 1s ease;
+  &:hover {
+    transition: background 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  &.disabled {
+    color: rgba(0,0,0, 0.25);
+  }
+}

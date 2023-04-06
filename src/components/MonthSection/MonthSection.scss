@@ -1,0 +1,29 @@
+@import "src/theme/variables";
+
+.monthWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 25px;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    padding: 0;
+    flex-direction: column;
+    .monthTable {
+      width: 100%;
+    }
+  }
+}
+
+.monthTable {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 20px);
+  flex-shrink: 0;
+  box-shadow: #a3a3a3 0 0 2px 0;
+}
+
+.noData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}

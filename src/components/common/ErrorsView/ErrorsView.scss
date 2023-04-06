@@ -1,0 +1,15 @@
+.errorsWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid indianred;
+  margin-top: 20px;
+  > div {
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+}

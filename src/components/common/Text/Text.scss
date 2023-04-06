@@ -1,0 +1,24 @@
+@import "src/theme/mixins/font";
+
+.inRow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+$sizes: 13, 14, 16, 18, 20, 24, 30, 40, 50;
+
+@each $size in $sizes {
+  .s#{$size}s {
+    @include font(#{$size}px, 600, 0, $sourceSerifFont);
+  }
+  .p#{$size}s {
+    @include font(#{$size}px, 700, 0, $playFont);
+  }
+  .s#{$size}r {
+    @include font(#{$size}px, 400, 0, $sourceSerifFont);
+  }
+  .p#{$size}r {
+    @include font(#{$size}px, 400, 0, $playFont);
+  }
+}

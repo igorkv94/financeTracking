@@ -1,0 +1,16 @@
+export const ROUTES = {
+  REGISTRATION: '/registration',
+  LOGIN: '/login',
+  PAGE_404: '/404',
+  MAIN: '/',
+  STATS: '/statistics/:month',
+  MONTHS: '/months',
+  TRANSACTIONS: '/transactions',
+  EXCHANGES: '/exchanges',
+  ADD_INCOME: '/add-income',
+  ADD_EXPEND: '/add-expend',
+  EXCHANGE: '/exchange',
+  CARDS: '/cards',
+  EDIT_INCOME_CATEGORIES: '/income-categories',
+  EDIT_EXPEND_CATEGORIES: '/expend-categories',
+};

@@ -1,0 +1,145 @@
+@import "src/theme/variables";
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  --color-red: #{$red};
+  --color-green: #{$green};
+  --color-blue: #{$blue};
+  --color-brown: #{$brown};
+  --color-dark-brown: #{$dark_brown};
+  --color-svg: #{$svg};
+}
+
+html, input {
+  font-family: 'Play', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: $site_bg;
+  margin: 0;
+  user-select: none;
+  @media screen and (max-width: #{$breakpointMobile}) {
+    background-color: $content_bg;
+  }
+}
+
+a {
+  color: black;
+}
+
+input {
+  font-size: 14px;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+:global(#root) {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 20px;
+  overflow-x: hidden;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    padding: 0 100px;
+  }
+  @media screen and (max-width: #{$breakpointSmallTablet}) {
+    padding: 0 20px;
+  }
+}
+
+:global(.flex) {
+  display: flex;
+}
+
+:global(.page) {
+  padding: 40px 0;
+}
+
+:global(.flexColumn) {
+  display: flex;
+  flex-direction: column;
+}
+
+:global(.flexXCenter) {
+  display: flex;
+  justify-content: center;
+}
+
+:global(.flexYCenter) {
+  display: flex;
+  align-items: center;
+}
+
+:global(.margin5) {
+  display: flex;
+  margin-right: 5px;
+}
+
+:global(.margin10) {
+  display: flex;
+  margin-right: 10px;
+}
+
+:global(.mobileOnly) {
+  display: none;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    display: block;
+  }
+}
+
+:global(.mobileOnlyFlex) {
+  display: none;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    display: flex;
+  }
+}
+
+:global(.desktopOnly) {
+  display: block;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    display: none;
+  }
+}
+
+:global(.desktopOnlyFlex) {
+  display: flex;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    display: none;
+  }
+}
+
+
+
+.app {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  background-color: #f1f1dc;
+  box-shadow: rgb(0 0 0 / 20%) 0 0 5px 0px;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    max-width: 100%;
+    padding: 0 25px;
+    box-shadow: none;
+  }
+  @media screen and (max-width: #{$breakpointSmallTablet}) {
+    max-width: 580px;
+    padding: 0 25px;
+  }
+  @media screen and (max-width: #{$breakpointMobile}) {
+    padding: 0;
+  }
+}

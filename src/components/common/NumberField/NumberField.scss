@@ -1,0 +1,54 @@
+@import "src/theme/mixins/font";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 5px 10px;
+  height: 60px;
+  cursor: text;
+  background-color: #fff;
+  >.field:not(:placeholder-shown) + .fieldName, &:focus-within {
+    .fieldNameAnim {
+      top: 0;
+      span {
+        @include font(13px, 600, 0, $sourceSerifFont);
+      }
+    }
+  }
+  &.hasError {
+    transition: color 0.3s ease;
+    color: red;
+  }
+  &.isDisabled {
+    color: rgba(128, 128, 128);
+  }
+}
+
+.fieldName {
+  order: 1;
+  position: relative;
+  margin-bottom: 3px;
+  display: flex;
+  > span {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fieldNameAnim {
+  position: absolute;
+  pointer-events: none;
+  top: 12px;
+  left: 0;
+  z-index: 1;
+  transition: top 0.15s ease-out;
+  span {
+    transition: font-size 0.15s ease-out;
+  }
+}
+
+.field {
+  order: 2;
+  margin-top: 5px;
+}

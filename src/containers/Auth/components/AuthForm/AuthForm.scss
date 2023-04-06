@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.inner {
+  max-width: 500px;
+  padding: 0 20px;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.margin20 {
+  margin-top: 20px;
+}
+
+.margin40 {
+  margin-top: 40px;
+}
+
+.button {
+  margin-top: 40px;
+  width: 100%;
+}

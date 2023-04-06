@@ -1,0 +1,49 @@
+@import "src/theme/variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    width: 100%;
+  }
+}
+
+.currencyWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  margin-top: 20px;
+}
+
+.iconWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.fields {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    flex-direction: column;
+  }
+}
+
+.bigMargin {
+  margin-top: 40px;
+}
+
+
+.addedTable {
+  margin-top: 40px;
+  width: 500px;
+  @media screen and (max-width: #{$breakpointTablet}) {
+    width: 100%;
+    padding: 0;
+  }
+}
